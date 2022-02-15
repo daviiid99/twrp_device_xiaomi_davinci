@@ -49,23 +49,8 @@ void load_properties(const char *model) {
 void vendor_load_properties() {
     property_set("ro.bootimage.build.date.utc", "1546335651");
     property_set("ro.build.date.utc", "1546335651");
-    std::string device_region = android::base::GetProperty("ro.boot.hwc", "");
-    if (device_region == "CN")
-    {
-        load_properties("davinci");
-    }
-    else if (device_region == "INDIA")
-    {
-        load_properties("davinciin");
-    }
-    else if (device_region == "GLOBAL")
-    {
-        load_properties("davinci");
-    }
-    else
-    {
-        load_properties("davinci");
-    }
+    load_properties("sm6150");
+  
 }
 
 }  // namespace init
