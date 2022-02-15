@@ -16,7 +16,7 @@
 
 ALLOW_MISSING_DEPENDENCIES := true
 SOONG_ALLOW_MISSING_DEPENDENCIES := true
-DEVICE_PATH := device/xiaomi/davinci
+DEVICE_PATH := device/qualcomm/sm6150
 
 # Architecture
 TARGET_ARCH := arm64
@@ -31,6 +31,9 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a73
 TARGET_USES_64_BIT_BINDER := true
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := sm6150
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sm6150
