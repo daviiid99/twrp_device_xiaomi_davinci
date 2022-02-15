@@ -19,15 +19,21 @@ PRODUCT_RELEASE_NAME := sm6150
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
-# Inherit from our custom product configuration
-$(call inherit-product, vendor/twrp/config/common.mk)
+# Inherit some common Omni stuff.
+$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/omni/config/gsm.mk)
+
+# Inherit from those products. Most specific first.
+$(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/embedded.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := sm6150
 PRODUCT_NAME := omni_sm6150
-PRODUCT_BRAND := QUALCOMM
-PRODUCT_MODEL := sm6150
-PRODUCT_MANUFACTURER := QUALCOMM
+PRODUCT_BRAND := qualcomm
+PRODUCT_MODEL := sm6150 for arm64
+PRODUCT_MANUFACTURER := qualcomm
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.product.device \
