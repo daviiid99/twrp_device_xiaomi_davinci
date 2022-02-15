@@ -15,7 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_davinci.mk
+    $(LOCAL_DIR)/omni_sm6150.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_davinci-eng
+    omni_sm6150-eng
