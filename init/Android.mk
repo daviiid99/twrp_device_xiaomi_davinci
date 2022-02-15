@@ -22,7 +22,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_C_INCLUDES := \
     system/core/base/include \
     system/core/init
-LOCAL_SRC_FILES := init_davinci.cpp
-LOCAL_MODULE := libinit_davinci
+LOCAL_SRC_FILES := init_sm6150.cpp
+LOCAL_MODULE := libinit_sm6150
 
 include $(BUILD_STATIC_LIBRARY)
